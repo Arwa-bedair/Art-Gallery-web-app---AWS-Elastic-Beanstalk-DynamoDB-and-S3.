@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ painting.title }} - Art Gallery</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <header>
+    <h1>🎨 The Art Gallery</h1>
+    <a href="/" class="back-link">← Back to Gallery</a>
+  </header>
+  <main>
+    <div class="detail-container">
+      <div class="detail-image">
+        <img src="{{ painting.image_url }}" alt="{{ painting.title }}">
+      </div>
+      <div class="detail-info">
+        <h2>{{ painting.title }}</h2>
+        <p class="artist-name">{{ painting.artist }}</p>
+        <p class="year">{{ painting.year }}</p>
+        <p class="description">{{ painting.description }}</p>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
