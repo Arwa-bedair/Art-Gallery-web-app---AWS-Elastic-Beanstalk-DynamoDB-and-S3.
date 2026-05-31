@@ -15,6 +15,10 @@
 
 The Art Gallery is a full-stack web application that allows visitors to browse six of the world's most famous paintings, click on any painting to open a dedicated detail page, and view rich metadata including the title, artist, year, and description.
 
+## 🎬 Live Demo
+
+![App Demo](docs/images/demo.gif)
+
 This project is built as a **hands-on AWS lab** that demonstrates real-world cloud architecture patterns including:
 
 - Separation of data from application code using **Amazon DynamoDB**
@@ -28,41 +32,7 @@ This project is built as a **hands-on AWS lab** that demonstrates real-world clo
 ---
 
 ## 🏗️ Architecture
-
-```
-                        ┌─────────────────────────────────┐
-                        │         AWS Cloud (us-west-2)   │
-                        │                                 │
-  User Browser          │   ┌─────────────────────────┐   │
-      │                 │   │   Elastic Beanstalk      │   │
-      │  HTTPS          │   │   Environment            │   │
-      ▼                 │   │                         │   │
- ┌─────────┐            │   │  ┌───────────────────┐  │   │
- │   ALB   │◄───────────┼───┼──│  Auto Scaling     │  │   │
- │  (pub)  │            │   │  │  Group            │  │   │
- └────┬────┘            │   │  │  ┌─────────────┐  │  │   │
-      │                 │   │  │  │ EC2 Instance│  │  │   │
-      │ internal        │   │  │  │ Flask+Gunic │  │  │   │
-      ▼                 │   │  │  └──────┬──────┘  │  │   │
- ┌─────────┐            │   │  │         │         │  │   │
- │ Private │            │   │  │  ┌─────────────┐  │  │   │
- │ Subnets │            │   │  │  │ EC2 Instance│  │  │   │
- └─────────┘            │   │  │  │ Flask+Gunic │  │  │   │
-                        │   │  │  └──────┬──────┘  │  │   │
-                        │   │  └─────────┼─────────┘  │   │
-                        │   └───────────┼─────────────┘   │
-                        │               │                  │
-                        │     ┌─────────┴──────────┐       │
-                        │     │                    │       │
-                        │     ▼                    ▼       │
-                        │ ┌────────┐         ┌─────────┐   │
-                        │ │Dynamo  │         │  S3     │   │
-                        │ │  DB    │         │ Bucket  │   │
-                        │ │(data)  │         │(images) │   │
-                        │ └────────┘         └─────────┘   │
-                        └─────────────────────────────────┘
-```
-
+![Architecture Diagram](docs/images/architecture.png)
 ### Request Flow
 
 | Step | What Happens |
