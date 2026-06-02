@@ -17,7 +17,7 @@ The Art Gallery is a full-stack web application that allows visitors to browse s
 
 ## 🎬 Live Demo
 
-![App Demo](docs/images/architecture.png))
+![App Demo](docs/images/demo.gif))
 
 This project is built as a **hands-on AWS lab** that demonstrates real-world cloud architecture patterns including:
 
