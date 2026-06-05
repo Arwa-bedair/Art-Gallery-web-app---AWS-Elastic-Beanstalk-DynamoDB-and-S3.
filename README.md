@@ -1,4 +1,4 @@
-# 🎨 Art Gallery Web Application
+#  Art Gallery Web Application
 
 > A production-grade web application deployed on AWS, showcasing famous paintings with a fully serverless-ready architecture using Elastic Beanstalk, DynamoDB, and S3.
 
@@ -11,11 +11,11 @@
 
 ---
 
-## 📌 Project Overview
+##  Project Overview
 
 The Art Gallery is a full-stack web application that allows visitors to browse six of the world's most famous paintings, click on any painting to open a dedicated detail page, and view rich metadata including the title, artist, year, and description.
 
-## 🎬 Live Demo
+##  Live Demo
 
 ![App Demo](docs/images/demo.gif))
 
@@ -31,7 +31,7 @@ This project is built as a **hands-on AWS lab** that demonstrates real-world clo
 
 ---
 
-## 🏗️ Architecture
+##  Architecture
 ![Architecture Diagram](docs/images/architecture.png)
 ### Request Flow
 
@@ -48,7 +48,7 @@ This project is built as a **hands-on AWS lab** that demonstrates real-world clo
 
 ---
 
-## ☁️ AWS Services Used
+##  AWS Services Used
 
 | Service | Role in This Project |
 |---------|---------------------|
@@ -62,7 +62,7 @@ This project is built as a **hands-on AWS lab** that demonstrates real-world clo
 
 ---
 
-## 🔑 Key Design Decisions
+##  Key Design Decisions
 
 ### 1. Data Separated from Code
 Painting data lives in DynamoDB, not in the source code. Adding a new painting requires only a new database record and an S3 upload — zero code changes, zero redeployment.
@@ -78,7 +78,7 @@ The environment runs a minimum of **2 EC2 instances across 2 Availability Zones*
 
 ---
 
-## 🗂️ Project Structure
+##  Project Structure
 
 ```
 art-gallery/
@@ -98,7 +98,7 @@ art-gallery/
 
 ---
 
-## ⚙️ Environment Variables
+##  Environment Variables
 
 | Variable | Description | Example |
 |----------|-------------|---------|
@@ -110,7 +110,7 @@ art-gallery/
 
 ---
 
-## 🗄️ DynamoDB Table Schema
+##  DynamoDB Table Schema
 
 **Table name:** `art-gallery-paintings`
 **Partition key:** `id` (Number)
@@ -126,11 +126,11 @@ art-gallery/
 
 ---
 
-## 🚀 Deployment
+##  Deployment
 
 Full step-by-step deployment instructions are included in the `docs/` folder:
 
-📄 **[Art_Gallery_AWS_Lab_Final.docx](docs/Art_Gallery_AWS_Lab_Final.docx)** — Complete hands-on lab guide covering:
+ **[Art_Gallery_AWS_Lab_Final.docx](docs/Art_Gallery_AWS_Lab_Final.docx)** — Complete hands-on lab guide covering:
 - All application files with full code
 - S3 bucket creation and image upload
 - DynamoDB table setup and data insertion
@@ -154,7 +154,7 @@ Full step-by-step deployment instructions are included in the `docs/` folder:
 
 ---
 
-## 🛠️ Local Development
+##  Local Development
 
 ```bash
 # Clone the repository
@@ -185,7 +185,7 @@ python app.py
 
 ---
 
-## 💰 Estimated Cost
+##  Estimated Cost
 
 | Scenario | Duration | Estimated Cost |
 |----------|----------|---------------|
@@ -199,7 +199,7 @@ python app.py
 
 ---
 
-## 🧹 Clean Up
+##  Clean Up
 
 ```
 1. Elastic Beanstalk → Environments → art-gallery-env → Actions → Terminate environment
@@ -209,7 +209,7 @@ python app.py
 
 ---
 
-## 📚 What This Project Demonstrates
+##  What This Project Demonstrates
 
 - **PaaS deployment** with AWS Elastic Beanstalk
 - **NoSQL data modeling** with Amazon DynamoDB
@@ -221,7 +221,7 @@ python app.py
 
 ---
 
-## 📄 License
+##  License
 
 This project is for educational purposes as part of the AWS Cloud Diploma program.
 
